@@ -7,6 +7,9 @@
 
 namespace Application;
 
+use Aos\Autoloader\Service\DequeueMessageService;
+use Application\Factory\DequeueMessageControllerFactory;
+use Application\Factory\EnqueueMessageControllerFactory;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
@@ -34,12 +37,41 @@ return [
                     ],
                 ],
             ],
+            'message_dequeue' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route'    => '/message[/:action]',
+                    'defaults' => [
+                        'controller' => Controller\DequeueMessageController::class,
+                        'action'     => 'dequeue',
+                    ],
+                ],
+            ],
+//            'message_enqueue' => [
+//                'type'    => Segment::class,
+//                'options' => [
+//                    'route'    => '/message[/:action]',
+//                    'defaults' => [
+//                        'controller' => Controller\EnqueueMessageController::class,
+//                        'action'     => 'enqueue',
+//                    ],
+//                ],
+//            ],
         ],
     ],
     'controllers' => [
         'factories' => [
             Controller\IndexController::class => InvokableFactory::class,
+            Controller\DequeueMessageController::class => DequeueMessageControllerFactory::class,
+//            Controller\EnqueueMessageController::class => EnqueueMessageControllerFactory::class,
         ],
+    ],
+    'service_manager' => [
+        'factories' => [
+            DequeueMessageService::class => function () {
+                return new DequeueMessageService();
+            }
+        ]
     ],
     'view_manager' => [
         'display_not_found_reason' => true,
@@ -56,5 +88,8 @@ return [
         'template_path_stack' => [
             __DIR__ . '/../view',
         ],
+        'strategies'                => array(
+            'ViewJsonStrategy',
+        ),
     ],
 ];
