@@ -4,8 +4,50 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ffdfd75c0922076aaf5b137b0130f561",
+    "content-hash": "8388120fdc03b76ea5e0ec64f69e0b6d",
     "packages": [
+        {
+            "name": "aos/autoloaderpsr4",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AOSiraj/autoloaderPsr4.git",
+                "reference": "218bb5ccaf0b91dde198e02ad06a648b9dfe50e1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AOSiraj/autoloaderPsr4/zipball/218bb5ccaf0b91dde198e02ad06a648b9dfe50e1",
+                "reference": "218bb5ccaf0b91dde198e02ad06a648b9dfe50e1",
+                "shasum": ""
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.2",
+                "phpunit/phpunit": "^8.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Aos\\AutoloaderPsr4\\": [
+                        "src/"
+                    ]
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Abdullah Omar Siraj",
+                    "email": "siraj.zafl@gmail.com"
+                }
+            ],
+            "description": "this is a sample psr4 package",
+            "support": {
+                "source": "https://github.com/AOSiraj/autoloaderPsr4/tree/master",
+                "issues": "https://github.com/AOSiraj/autoloaderPsr4/issues"
+            },
+            "time": "2019-06-09T07:57:24+00:00"
+        },
         {
             "name": "container-interop/container-interop",
             "version": "1.2.0",
@@ -312,16 +354,16 @@
         },
         {
             "name": "zendframework/zend-config",
-            "version": "3.2.0",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-config.git",
-                "reference": "6796f5dcba52c84ef2501d7313618989b5ef3023"
+                "reference": "012341361ae3cc97a99959e7cb7c9ebd04d49572"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-config/zipball/6796f5dcba52c84ef2501d7313618989b5ef3023",
-                "reference": "6796f5dcba52c84ef2501d7313618989b5ef3023",
+                "url": "https://api.github.com/repos/zendframework/zend-config/zipball/012341361ae3cc97a99959e7cb7c9ebd04d49572",
+                "reference": "012341361ae3cc97a99959e7cb7c9ebd04d49572",
                 "shasum": ""
             },
             "require": {
@@ -349,8 +391,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.2.x-dev",
-                    "dev-develop": "3.3.x-dev"
+                    "dev-master": "3.3.x-dev",
+                    "dev-develop": "3.4.x-dev"
                 }
             },
             "autoload": {
@@ -368,7 +410,7 @@
                 "config",
                 "zf"
             ],
-            "time": "2018-04-24T19:26:44+00:00"
+            "time": "2019-06-08T18:58:54+00:00"
         },
         {
             "name": "zendframework/zend-console",
@@ -2638,16 +2680,16 @@
         },
         {
             "name": "phpunit/php-timer",
-            "version": "2.1.1",
+            "version": "2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-timer.git",
-                "reference": "8b389aebe1b8b0578430bda0c7c95a829608e059"
+                "reference": "1038454804406b0b5f5f520358e78c1c2f71501e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/8b389aebe1b8b0578430bda0c7c95a829608e059",
-                "reference": "8b389aebe1b8b0578430bda0c7c95a829608e059",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/1038454804406b0b5f5f520358e78c1c2f71501e",
+                "reference": "1038454804406b0b5f5f520358e78c1c2f71501e",
                 "shasum": ""
             },
             "require": {
@@ -2683,7 +2725,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2019-02-20T10:12:59+00:00"
+            "time": "2019-06-07T04:22:29+00:00"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -4512,6 +4554,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "aos/autoloaderpsr4": 20,
         "mockery/mockery": 20
     },
     "prefer-stable": true,
