@@ -1,8 +1,0 @@
-actor: ApiTester
-modules:
-    enabled:
-        - REST:
-            url: http://server.loopback.world
-            depends: PhpBrowser
-            part: Json
-        - \Helper\Api

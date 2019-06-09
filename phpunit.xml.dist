@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit colors="true">
+<phpunit bootstrap="vendor/autoload.php" colors="true">
     <testsuites>
-        <testsuite name="ZendSkeletonApplication Test Suite">
+        <testsuite name="Application\\Test">
             <directory>./module/Application/test</directory>
         </testsuite>
     </testsuites>
 
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./module</directory>
+            <directory suffix=".php">./module/Application/src</directory>
             <exclude>
-                <directory suffix="ConfigProvider.php">./src</directory>
+                <directory suffix="Module.php">./module/Application/src</directory>
             </exclude>
         </whitelist>
     </filter>
